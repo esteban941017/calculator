@@ -1,0 +1,130 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Roboto Mono', monospace;
+  color: rgba(255, 255, 255, 0.8);
+}
+body {
+  height: 100vh;
+  background: linear-gradient(60deg, #40e0d0, #ff8c00, #ff0080);
+  position: relative;
+  overflow: hidden;
+}
+.circulo {
+  display: block;
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid #fff0;
+  background: #fff5;
+  box-shadow: inset 2px 3px 5px #fff;
+}
+.cA {
+  height: 100px;
+  width: 100px;
+  left: 10%;
+  top: 20%;
+  animation: circle 50s linear infinite;
+}
+.cB {
+  height: 150px;
+  width: 150px;
+  left: 25%;
+  top: 70%;
+  animation: circle2 30s linear infinite;
+}
+.cC {
+  height: 50px;
+  width: 50px;
+  left: 35%;
+  top: 50%;
+  animation: circle 30s backwards infinite;
+}
+.cD {
+  height: 100px;
+  width: 100px;
+  left: 60%;
+  top: 60%;
+  animation: circle2 30s linear infinite;
+}
+.cE {
+  height: 250px;
+  width: 250px;
+  left: 75%;
+  top: 40%;
+  animation: circle 50s backwards infinite;
+}
+@keyframes circle {
+  0% {
+    transform: rotate(0deg) translate(-165px) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translate(-165px) rotate(-360deg);
+  }
+}
+@keyframes circle2 {
+  0% {
+    transform: rotate(0deg) translate(165px) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translate(165px) rotate(360deg);
+  }
+}
+.calculadora {
+  margin: 50px auto 0px auto;
+  padding: 15px;
+  width: 500px;
+  border-radius: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgb(255, 255, 255, 0.1);
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(5px);
+}
+.pantalla {
+  display: block;
+  max-width: 100%;
+  height: 80px;
+  margin-bottom: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 15px;
+  font-size: 60px;
+  text-align: right;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+.pantalla::-webkit-scrollbar {
+  height: 10px;
+}
+.pantalla::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 5px 5px 5px 5px;
+}
+.numero {
+  display: block;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 15px;
+  font-size: 42px;
+  text-align: center;
+  cursor: pointer;
+}
+.numero p {
+  transition: transform 0.2s;
+}
+.numero:hover p {
+  transform: scale(1.3);
+}
+.containerNumeros {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.Clear {
+  grid-column: 1/3;
+}
+.Suma {
+  grid-column: 4/5;
+  grid-row: 3/5;
+  display: flex;
+  justify-content: center;
+}
+.Suma p {
+  margin: auto auto auto auto;
+}
